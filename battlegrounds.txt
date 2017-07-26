@@ -1,0 +1,6 @@
+"battlegrounds"
+{
+	"base"		"base"
+	"title"		"Battlegrounds"
+	"menusystem"	"1"
+}
