@@ -9,9 +9,6 @@ Settings = {
 	RoundTime = 20, -- Value in minutes
 }
 
-function GM:Initialize()
-end
-
 -- Setup the teams
-team.SetUp( 1, "Player", Color( 125, 125, 125, 255 ) )
-team.SetUp( 2, "Spectator", Color( 125, 125, 125, 255 ) )
+team.SetUp( 1, "Players", Color( 125, 125, 125, 255 ) )
+team.SetUp( 2, "Spectators", Color( 125, 125, 125, 255 ) )
