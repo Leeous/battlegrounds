@@ -76,3 +76,27 @@ function message_the_client( ply, str )
 	net.WriteString(str)
 	net.Send(ply)
 end
+
+-- Create command line functions for server user
+concommand.Add( "bg", function( ply, cmd, args )
+	local command = args[1]
+	local cHighlight = Color(33, 255, 0)
+	local cText = Color(155, 155, 155)
+	
+	if args[1] == nil then
+		MsgC( Color( 33, 255, 0 ), "[BG] " )
+		MsgC( Color( 255, 255, 255 ), "This is the command line argument for Battlegrounds. Use \"bg help\" to display all possible commands.\n" )
+	end
+
+	if args[1] == "clear" then
+		MsgC( Color( 33, 255, 0 ), "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" )
+	end
+
+	if command == "help" then
+		MsgC( cHighlight, "\n[BG] ")
+		MsgC( cText, "Listing all commands.\n")
+		MsgC( Color(155, 155, 155), "[] = required. () = optional.\n")
+		MsgC( cText,    "+-------------------------------+--------------------------+\n| bg help                       |     Shows this menu.     |\n+-------------------------------+--------------------------+\n| bg clear                      |   \"Clears\" the console.  |\n+-------------------------------+--------------------------+\n| bg changeteam [player] [team] | Changes a player's team. |\n+-------------------------------+--------------------------+\n")
+	end
+
+end )
