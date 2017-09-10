@@ -13,11 +13,10 @@ include( "shared.lua" )
 
 -- Setup default player loadout
 function GM:PlayerInitialSpawn( ply )
-	ply:SetWalkSpeed( Settings.DefaultWalkSpeed )
-	ply:SetRunSpeed( Settings.DefaultRunSpeed )
-	net.Start( "popupTeamSelect" )
-	net.WriteEntity(ply)
-	net.Send(ply)
+	ply:SetWalkSpeed( Settings.PlyWalkSpeed )
+	ply:SetRunSpeed( Settings.PlyRunSpeed )
+	ply:SetHealth( Settings.PlyHealth )
+	message_the_client(ply, "Team menu disabled for now - too messy. Use changeteam 1 in console.")
 end
 
 -- Ensure player spawns every time with the default loadout

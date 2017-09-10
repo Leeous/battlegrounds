@@ -3,10 +3,15 @@ GM.Author = "Leeous"
 GM.Email = "contact@leeous.com"
 GM.Website = "http://leeous.com"
 
+-- For documentation on the settings and what they do, go to https://github.com/Leeous/battlegrounds/wiki/Settings-Documentation
 Settings = {
-	DefaultWalkSpeed = 175,
-	DefaultRunSpeed = 275,
-	RoundTime = 20, -- Value in minutes
+	PlyWalkSpeed = 175,
+	PlyRunSpeed = 275,
+	PlyHealth = 100,
+	RoundTime = 20,
+	Emotes = true,
+	AmmoPickup = true,
+	GunPickup = true,
 }
 
 -- Setup the teams
